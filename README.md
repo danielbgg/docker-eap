@@ -1,1 +1,1 @@
-EAP 6.0 Base Image
+EAP 6.4.0 Docker Base Image
