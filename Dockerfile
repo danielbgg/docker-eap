@@ -6,7 +6,8 @@ USER root
 # create workdir
 WORKDIR /opt
 
-ADD jboss-eap-6.4.0.zip /tmp/jboss-eap-6.4.0.zip
+ADD install/jboss-eap-6.4.0.zip /tmp/jboss-eap-6.4.0.zip
+#ADD install/jboss-eap-6.4.9-patch.zip /tmp/jboss-eap-6.4.9-patch.zip
 
 RUN unzip /tmp/jboss-eap-6.4.0.zip
 
@@ -15,6 +16,10 @@ RUN rm /tmp/jboss-eap-6.4.0.zip
 ENV JBOSS_HOME /opt/jboss-eap-6.4
 
 RUN $JBOSS_HOME/bin/add-user.sh admin redhat@123 --silent
+
+#RUN $JBOSS_HOME/bin/jboss-cli.sh --command="patch apply /tmp/jboss-eap-6.4.9-patch.zip --override-all" 
+
+#RUN rm /tmp/jboss-eap-6.4.9-patch.zip
 
 RUN echo "JAVA_OPTS=\"\$JAVA_OPTS -Djboss.bind.address=0.0.0.0 -Djboss.bind.address.management=0.0.0.0\"" >> $JBOSS_HOME/bin/standalone.conf
 
