@@ -1,6 +1,0 @@
-Download the following from http://developers.redhat.com
-
- * EAP 6.4.0 installer (jboss-eap-6.4.0.zip)
-
-and copy to this directory for the Docker image to work.
-
