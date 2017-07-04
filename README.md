@@ -5,7 +5,7 @@
 * cd install
 * python -m SimpleHTTPServer
 * cd ..
-* docker build --add-host foo:172.17.0.1 --rm --tag=kerdlix/eap-6.4.0-base .
+* docker build --add-host foo:172.17.0.1 --rm --tag=kerdlix/docker-eap-6.4.0-base .
 ```
 
 ## Run
@@ -19,5 +19,5 @@ docker pull kerdlix/eap-6.4.0-base
 ```
 
 ## Docker Hub
-[https://hub.docker.com/r/kerdlix/eap-6.4.0-base](https://hub.docker.com/r/kerdlix/eap-6.4.0-base)
+[https://hub.docker.com/r/kerdlix/docker-eap-6.4.0-base](https://hub.docker.com/r/kerdlix/docker-eap-6.4.0-base)
 
