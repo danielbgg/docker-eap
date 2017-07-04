@@ -17,6 +17,10 @@ RUN cd /tmp && \
     curl -O http://foo:8000/jboss-eap-6.4.9-patch.zip && \
     $JBOSS_HOME/bin/jboss-cli.sh --command="patch apply /tmp/jboss-eap-6.4.9-patch.zip --override-all"  && \
     rm /tmp/jboss-eap-6.4.9-patch.zip   && \
+    cd /tmp && \
+    curl -O http://foo:8000/jboss-eap-6.4.16-patch.zip && \
+    $JBOSS_HOME/bin/jboss-cli.sh --command="patch apply /tmp/jboss-eap-6.4.16-patch.zip --override-all"  && \
+    rm /tmp/jboss-eap-6.4.16-patch.zip   && \
     echo "JAVA_OPTS=\"\$JAVA_OPTS -Djboss.bind.address=0.0.0.0 -Djboss.bind.address.management=0.0.0.0\"" >> $JBOSS_HOME/bin/standalone.conf  && \
     chown -R jboss:jboss /opt/jboss-eap-6.4
 
