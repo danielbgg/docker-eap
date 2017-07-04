@@ -1,4 +1,4 @@
-# EAP 6.4.0 Docker Base Image
+# EAP 6.4.9 Docker Base Image
 
 ## Requirements
 ```
