@@ -10,19 +10,16 @@
 * cd <EAP_INSTALL_FOLDER>
 * python -m SimpleHTTPServer
 * cd <THIS_PROJECT>
-* docker build --add-host foo:172.17.0.1 --rm --tag=kerdlix/docker-eap-6.4.0-base .
+* docker build --add-host foo:172.17.0.1 --rm --tag=kerdlix/docker-eap-6.4:6.4.0 .
 ```
 
 ## Run
 ```
-docker run -it -p 8080:8080 -p 9990:9990 kerdlix/eap-6.4.0-base
+docker run -it -p 8080:8080 -p 9990:9990 kerdlix/docker-eap-6.4:6.4.0
 ```
 
 ## Import image
 ```
-docker pull kerdlix/eap-6.4.0-base
+docker pull kerdlix/docker-eap-6.4:6.4.0
 ```
-
-## Docker Hub
-[https://hub.docker.com/r/kerdlix/docker-eap-6.4.0-base](https://hub.docker.com/r/kerdlix/docker-eap-6.4.0-base)
 
