@@ -2,7 +2,10 @@
 
 ## Build
 ```
-docker build --rm --tag=kerdlix/eap-6.4.0-base .
+* cd install
+* python -m SimpleHTTPServer
+* cd ..
+* docker build --add-host foo:172.17.0.1 --rm --tag=kerdlix/eap-6.4.0-base .
 ```
 
 ## Run
