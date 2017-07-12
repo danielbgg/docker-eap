@@ -13,6 +13,10 @@ RUN cd /tmp && \
     unzip /tmp/jboss-eap-7.0.0.zip -d /opt && \
     rm /tmp/jboss-eap-7.0.0.zip && \
     $JBOSS_HOME/bin/add-user.sh admin redhat@123 --silent && \
+    cd /tmp && \
+    curl -O http://foo:8000/jboss-eap-7.0.6-patch.zip && \
+    $JBOSS_HOME/bin/jboss-cli.sh --command="patch apply /tmp/jboss-eap-7.0.6-patch.zip --override-all"  && \
+    rm /tmp/jboss-eap-7.0.6-patch.zip && \
     echo "JAVA_OPTS=\"\$JAVA_OPTS -Djboss.bind.address=0.0.0.0 -Djboss.bind.address.management=0.0.0.0\"" >> $JBOSS_HOME/bin/standalone.conf  && \
     chown -R jboss:jboss /opt/jboss-eap-7.0
 
